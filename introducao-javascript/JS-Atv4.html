@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quarta atividade uhuul</title>
+</head>
+<body>
+    <h3>Somatória de dois números inteiros</h3>
+    <script>
+        var action;
+        var n1;
+        var n2;
+        var result
+        
+        action = window.prompt('Que ação matemática você quer realizar?');
+        n1 = window.prompt('Informe o primeiro número');
+        n2 = window.prompt('Informe o segundo número');
+
+        switch(action){
+            case "somar":
+                result = parseInt(n1) + parseInt(n2);
+                document.write("A soma dos números é: " + parseInt(result));
+            break;
+            case "subtrair":
+                result = parseInt(n1) - parseInt(n2);
+                document.write("A subtração dos números é: " + parseInt(result));
+            break;
+            case "multiplicar":
+                result = parseInt(n1) * parseInt(n2);
+                document.write("A multiplicação dos números é: " + parseInt(result));
+            break;
+            case "dividir":
+                result = parseInt(n1) / parseInt(n2);
+                document.write("A divisão dos números é " + parseInt(result));
+            break
+        }
+    </script>
+</body>
+</html>
