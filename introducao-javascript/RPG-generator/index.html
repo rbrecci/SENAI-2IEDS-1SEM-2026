@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Personagens de RPG</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Bem Vindo á Taverna Virtual!</h1>
+    </header>
+    <main>
+        <section class="form-container">
+            <form action="" method="post" id="formulario">
+                <div class="nome">
+                    <label for="nome"><h3>Insira o nome do seu personagem:</h3></label>
+                    <input type="text" id="nome">
+                </div>
+
+                <div class="classe">
+                    <label for="classe"><h3>Escolha a classe do seu personagem:</h3></label>
+                    <select id="classe">
+                        <option value="Guerreiro">Guerreiro</option>
+                        <option value="Bárbaro">Bárbaro</option>
+                        <option value="Monge">Monge</option>
+                        <option value="Paladino">Paladino</option>
+                        <option value="Clérigo">Clérigo</option>
+                        <option value="Mago">Mago</option>
+                        <option value="Ladino">Ladino</option>
+                        <option value="Feiticeiro">Feiticeiro</option>
+                        <option value="Druida">Druida</option>
+                        <option value="Bardo">Bardo</option>
+                        <option value="Bruxo">Bruxo</option>
+                    </select>
+                </div>
+
+                <div class="habilidade">
+                    <label for="habilidade"><h3>Descreva a principal habilidade do seu personagem</h3></label>
+                    <input type="text" id="habilidade">
+                </div>
+
+                <div class="botaos">
+                    <button type="submit" onclick="criarPersonagem()">Criar</button>
+                    <button type="reset">Limpar campos</button>
+                </div>
+            </form>
+            <div id="resultado"></div>
+        </section>
+    </main>
+    <footer>
+        <span>© 2026 RBrecci</span>
+    </footer>
+</body>
+</html>
