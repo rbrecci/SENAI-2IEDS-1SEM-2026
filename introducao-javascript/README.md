@@ -50,3 +50,34 @@ O botão "Preparar Suco" monta uma mensagem personalizada com base nas escolhas.
 Há também um botão para selecionar todas as frutas automaticamente.  
 
 Objetivo: manipulação de múltiplos tipos de inputs, uso de arrays, validação e construção dinâmica de mensagens.
+
+---
+
+## Atividade 6 – Calculadora de Intervalo entre Datas
+
+Arquivo: `JS-Atv6.html`
+
+Aplicação que permite ao usuário selecionar duas datas e calcular o intervalo entre elas.
+
+O sistema:
+- Valida se ambas as datas foram preenchidas
+- Calcula a diferença em dias
+- Converte o resultado para meses (aproximado)
+- Converte o resultado para anos (aproximado)
+- Exibe os resultados dinamicamente na página
+
+Também possui um botão para limpar os campos e o resultado exibido.
+
+Objetivo: manipulação de datas com `Date`, cálculos com milissegundos, validação de formulário e atualização dinâmica do conteúdo com `innerHTML`.
+
+---
+
+## Atividade 7 – Gerador de Personagens de RPG
+
+Pasta: `RPG-generator`
+
+Aplicação web interativa para criação de personagens de RPG.  
+O usuário informa o nome, escolhe uma classe e descreve uma habilidade principal.  
+O sistema gera automaticamente uma frase personalizada com um adjetivo aleatório, exibindo o personagem criado na tela.
+
+Objetivo: integração entre HTML, CSS e JavaScript, manipulação de formulários, uso de eventos, validação de campos e geração de conteúdo dinâmico.
