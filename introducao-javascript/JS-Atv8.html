@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exemplo de uso de Array em JacaScript</h1>
+    <div id="resultado"></div>
+    <div>
+        <button onclick="mostrarFrutas()">Mostrar Frutas</button>
+        <button onclick="adicionarFrutas()">Adicionar Frutas</button>
+        <button onclick="removerUltima()">Remover Frutas</button>
+    </div>
+    <script>
+        let frutas = [];
+
+        function mostrarFrutas(){
+            let resultadoDiv = document.getElementById("resultado");
+            if (frutas.length === 0){
+                resultadoDiv.innerHTML = '<strong>Array completo:</strong> [] <br> <strong>Quantidade de frutas:</strong> 0 <br> <em>O array está vazio.</em>';
+            } else {
+                resultadoDiv.innerHTML = `<strong>Array completo:</strong> [${frutas.join(", ")}] <br>
+                <strong>Quantidade de frutas:</strong> ${frutas.length} <br>
+                `;
+            }
+        }
+
+        function adicionarFrutas(){
+
+            let novaFruta = prompt("Digite o nome da nova fruta");
+
+            if(novaFruta){
+                frutas.push(novaFruta);
+                mostrarFrutas();
+            }
+        }
+
+        function removerUltima(){
+            if(frutas.length > 0){
+                frutas.pop();
+            } else{
+                alert("O array já está vazio!");
+            }
+
+            mostrarFrutas();
+        }
+        mostrarFrutas();
+    </script>
+</body>
+</html>
