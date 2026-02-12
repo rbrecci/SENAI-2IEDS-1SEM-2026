@@ -81,3 +81,21 @@ O usuário informa o nome, escolhe uma classe e descreve uma habilidade principa
 O sistema gera automaticamente uma frase personalizada com um adjetivo aleatório, exibindo o personagem criado na tela.
 
 Objetivo: integração entre HTML, CSS e JavaScript, manipulação de formulários, uso de eventos, validação de campos e geração de conteúdo dinâmico.
+
+---
+
+## Atividade 8 – Manipulação de Array (Frutas)
+
+Arquivo: `JS-Atv8.html`
+
+Aplicação simples para demonstrar o uso de arrays em JavaScript.
+
+O sistema permite:
+- Visualizar o conteúdo atual do array
+- Adicionar novas frutas ao array via `prompt`
+- Remover a última fruta adicionada
+- Exibir a quantidade de itens armazenados
+
+Caso o array esteja vazio, o sistema informa essa condição na tela.
+
+Objetivo: praticar manipulação de arrays utilizando métodos como `push()`, `pop()`, `join()`, além de trabalhar atualização dinâmica do DOM e controle de estado da aplicação.
