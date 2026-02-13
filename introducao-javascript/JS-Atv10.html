@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Avaliador de nota</h1>
+    <label for="nota">Digite uma nota:</label>
+    <input type="number" id="nota">
+    <button onclick="avaliar()">Avaliar</button>
+    <h2 id="resultado"></h2>
+    <script>
+        function avaliar(){
+            let nota = document.getElementById('nota').value;
+            let resultado = document.getElementById('resultado');
+
+            if (nota >= 9){
+                resultado.innerHTML = "Amassou tirou notão";
+            } else if(nota >= 7){
+                resultado.innerHTML = "Boa irmão, foi uma nota legal";
+            } else{
+                resultado.innerHTML = "Chapou...";
+            }
+        }
+    </script>
+</body>
+</html>

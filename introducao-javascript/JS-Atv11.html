@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <meta charset="UTF-8"> </head>
+<body>
+    <script>
+        let autorizados = ["Ana", "Carlos", "Marta", "João"];
+        let nomeUsuario = prompt("Digite seu nome:");
+        let horaAtual = Number(prompt("Digite a hora atual (0-23):"));
+        if (autorizados.includes(nomeUsuario)) {
+            if (horaAtual < 22) { alert("Acesso Permitido. Bem-vindo, " + nomeUsuario + "!"); } 
+            else { alert("Acesso Negado: Fora do horário permitido (após as 22h)."); }
+        } else { alert("Acesso Negado: Usuário não cadastrado."); }
+    </script>
+</body>
+</html>

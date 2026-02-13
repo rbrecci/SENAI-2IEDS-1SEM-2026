@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Operadores JavaScript - SENAI</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        h2 {
+            color: #d32f2f;
+            border-bottom: 2px solid #d32f2f;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #b71c1c;
+        }
+
+        .grid-resultados {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .secao {
+            background: #fafafa;
+            padding: 15px;
+            border-left: 4px solid #d32f2f;
+            border-radius: 4px;
+        }
+
+        h4 {
+            margin: 0 0 10px 0;
+            color: #455a64;
+            text-transform: uppercase;
+            font-size: 0.8em;
+        }
+
+        p {
+            margin: 5px 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+        }
+
+        .destaque {
+            color: #d32f2f;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>📌 Prática de Operadores JavaScript</h2>
+        <p>Insira dois números para processar as operações do material:</p>
+
+        <div class="input-group">
+            <input type="number" id="numA" placeholder="Número A (ex: 10)">
+            <input type="number" id="numB" placeholder="Número B (ex: 5)">
+        </div>
+
+        <button onclick="processarOperadores()">Calcular Tudo</button>
+
+        <div class="grid-resultados" id="painel">
+        </div>
+
+    </div>
+
+    <script>
+        function processarOperadores() {
+            // 1. Captura e conversão dos dados (Baseado no PDF)
+            let a = Number(document.getElementById('numA').value);
+            let b = Number(document.getElementById('numB').value);
+            let painel = document.getElementById('painel');
+
+            // Validação simples
+            if (isNaN(a) || isNaN(b)) {
+                alert("Por favor, digite números válidos.");
+                return;
+            }
+
+            // Gerando o conteúdo HTML dinamicamente com os operadores do material
+            painel.innerHTML = `
+        <section>
+            <h4>A. Aritméticos</h4>
+            <p>Soma (+): <span class="destaque">${a + b}</span></p>
+            <p>Subtração (-): <span class="destaque">${a - b}</span></p>
+            <p>Multiplicação (*): <span class="destaque">${a * b}</span></p>
+            <p>Divisão (/): <span class="destaque">${(a / b).toFixed(2)}</span></p>
+            <p>Resto (%): <span class="destaque">${a % b}</span></p>
+            <p>Potência (**): <span class="destaque">${a ** b}</span></p>
+        </section>
+
+        <section>
+            <h4>B. Atribuição</h4>
+            <p>Simples (=): <span class="destaque">${a}</span></p>
+            <p>Soma (+=): <span class="destaque">${a += b}</span></p>
+            <p>Subtr. (-=): <span class="destaque">${a -= b}</span></p>
+            <p>Multp. (*=): <span class="destaque">${a *= b}</span></p>
+        </section>
+
+        <section>
+            <h4>C. Comparação</h4>
+            <p>Igual (==): <span class="destaque">${a == b}</span></p>
+            <p>Idêntico (===): <span class="destaque">${a === b}</span></p>
+            <p>Diferente (!=): <span class="destaque">${a != b}</span></p>
+            <p>Maior (>): <span class="destaque">${a > b}</span></p>
+            <p>Menor ou Igual (<=): <span class="destaque">${a <= b}</span></p>
+        </section>
+                <section>
+            <h4>D. Lógicos</h4>
+            <p>E (&&): <span class="destaque">${(a > 0 && b > 0)}</span> (Ambos > 0?)</p>
+            <p>OU (||): <span class="destaque">${(a > 0 || b > 0)}</span> (Algum > 0?)</p>
+            <p>NÃO (!): <span class="destaque">${!(a > b)}</span> (! A > B)</p>
+        </section>
+
+        <section>
+            <h4>E. Incr / Decr</h4>
+            <p>Incremento (++): <span class="destaque">${a + 1}</span> (A + 1)</p>
+            <p>Decremento (--): <span class="destaque">${b - 1}</span> (B - 1)</p>
+        </section>
+
+        <section>
+            <h4>F. Ternário (Status)</h4>
+            <p>A > B: <span class="destaque">${a > b ? "Sim" : "Não"}</span></p>
+            <p>Igualdade: <span class="destaque">${a === b ? "Gêmeos" : "Diferentes"}</span></p>
+        </section>
+        `;
+        }
+    </script>
+
+
+</body>
+
+</html>
