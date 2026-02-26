@@ -99,3 +99,117 @@ O sistema permite:
 Caso o array esteja vazio, o sistema informa essa condição na tela.
 
 Objetivo: praticar manipulação de arrays utilizando métodos como `push()`, `pop()`, `join()`, além de trabalhar atualização dinâmica do DOM e controle de estado da aplicação.
+
+
+---
+
+## Atividade 9 – Radar Eletrônico  
+Arquivo: `JS-Atv9.html`
+
+Simulação de um radar de velocidade com limite fixo de **80 km/h**.  
+O usuário informa a velocidade do veículo e o sistema exibe uma mensagem indicando se está dentro do limite ou se foi multado, alterando também a cor do texto conforme o resultado.
+
+**Conceitos trabalhados:**
+- Entrada de dados
+- Conversão de tipos (`Number`)
+- Estruturas condicionais (`if / else`)
+- Manipulação do DOM e estilos via JavaScript
+
+---
+
+## Atividade 10 – Avaliador de Nota  
+Arquivo: `JS-Atv10.html`
+
+Aplicação que recebe uma nota numérica e exibe uma avaliação textual de acordo com o desempenho do aluno.
+
+**Conceitos trabalhados:**
+- Estruturas condicionais encadeadas (`if / else if / else`)
+- Manipulação de elementos HTML
+- Lógica de decisão
+
+---
+
+## Atividade 11 – Controle de Acesso  
+Arquivo: `JS-Atv11.html`
+
+Sistema que verifica se um usuário está autorizado a acessar o sistema e se o acesso ocorre dentro do horário permitido (antes das 22h).
+
+**Conceitos trabalhados:**
+- Arrays e método `includes()`
+- Condicionais aninhadas
+- Uso de `prompt` e `alert`
+- Validação por múltiplos critérios
+
+---
+
+## Atividade 12 – Prática de Operadores JavaScript  
+Arquivo: `JS-Atv12.html`
+
+Painel interativo que demonstra o funcionamento dos principais operadores do JavaScript, exibindo os resultados dinamicamente na tela.
+
+**Operadores abordados:**
+- Aritméticos
+- Atribuição
+- Comparação
+- Lógicos
+- Incremento e decremento
+- Operador ternário
+
+**Conceitos trabalhados:**
+- Operadores em JavaScript
+- Template strings
+- Atualização dinâmica do DOM
+
+---
+
+## Atividade 13 – Template Strings e Cálculo Salarial  
+Arquivo: `JS-Atv13.html`
+
+Aplicação que utiliza **template strings (crase)** para exibir informações do usuário e calcular um aumento salarial de 10%, apresentando os valores formatados na tela.
+
+**Conceitos trabalhados:**
+- Template strings
+- Operações matemáticas
+- Formatação de números
+- Inserção dinâmica de HTML
+
+---
+
+## Atividade 14 – Avaliador de Desempenho do Funcionário  
+Pasta: `Atividade14`
+
+Sistema completo que avalia o desempenho de um funcionário com base em:
+- Salário
+- Cargo
+- Número de faltas
+- Número de atrasos
+
+O sistema calcula o aumento salarial conforme o cargo, desde que o funcionário não tenha faltas ou atrasos.
+
+**Conceitos trabalhados:**
+- Separação de HTML, CSS e JavaScript
+- Estruturas condicionais e `switch`
+- Validação de formulário
+- Manipulação do DOM
+- Organização de projeto web
+
+---
+
+## Atividade 15 – Gerador de Tabuadas  
+Arquivo: `JS-Atv15.html`
+
+Aplicação que gera automaticamente as tabuadas de **1 a 10**, exibindo os resultados dinamicamente na tela.  
+Possui controle para evitar duplicação e opção para apagar os resultados.
+
+**Conceitos trabalhados:**
+- Laços de repetição (`for`)
+- Geração dinâmica de HTML
+- Controle de estado da aplicação
+- Manipulação avançada do DOM
+
+---
+
+## Tecnologias Utilizadas
+- HTML5  
+- CSS3  
+- JavaScript (Vanilla JS)
