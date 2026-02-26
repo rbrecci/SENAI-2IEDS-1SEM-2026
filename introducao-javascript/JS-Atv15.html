@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Tabuadas JavaScript</title>
+</head>
+<body>
+    <header><h1>Gerador de Tabuadas</h1></header>
+    <main>
+        <div id="alert">
+            <p>Você já gerou as tabuadas, por favor apague-as para gerar novamente.</p>
+            <button onclick="voltar()">Fechar</button>
+        </div>
+        <section>
+            <div class="buttons">
+                <button onclick="calcular()">Gerar tabuadas</button>
+                <button onclick="limpar()">Apagar</button>
+            </div>
+            <div id="resultado"></div>
+            
+        </section>
+    </main>
+    <script>
+        const resultadoDiv = document.getElementById("resultado");
+        const alerta = document.getElementById("alert");
+        function calcular(){
+            var resultado = '';
+            
+            if(resultadoDiv.innerHTML == ''){
+                for(let tabuada = 1; tabuada <= 10; tabuada++){
+                    resultado += `<div class="card"><h2>Tabuada do ${tabuada}</h2>`;
+                    for(let multiplicador = 1; multiplicador <= 10; multiplicador++){
+                        resultado +=`<p>Multiplicado por ${multiplicador}: ${tabuada*multiplicador}</p>`;
+                    }
+                    resultado += '</div>';
+                }
+                resultadoDiv.innerHTML = resultado;
+            } else{
+                alerta.style ='display:inherit';
+            }
+        }
+        function limpar(){ resultadoDiv.innerHTML = ''; }
+        function voltar(){ alerta.style ='display:none';}
+    </script>
+    <style>
+        *{
+            font-family: arial, serif;
+            margin: 0;
+            padding: 0;
+        }
+        #resultado{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5%;
+            row-gap: 15px;
+        }
+        header{
+            text-align: center;
+            padding: 10px;
+            border-bottom: 2px solid black;
+        }
+        section{ position: relative; }
+        #alert{
+            position: absolute;
+            height: 100px;
+            width: 250px;
+            text-align: center;
+            border-radius: 15px;
+            inset: 0;
+            background-color: blue;
+            color: white;
+            margin: auto;
+            display: none;
+            padding: 10px;
+            z-index: 999;
+            font-size: 1.2rem;
+            border: 1px solid black;
+
+            & button{
+                margin-top: 7px;
+                background-color: white;
+                border: 1px solid black;
+                padding: 5px;
+                border-radius: 2px;
+            }
+        }
+        .buttons{
+            display: flex;
+            padding: 5px;
+            justify-content: center;
+            gap: 10px;
+
+            & button{
+                border: none;
+                background-color: blue;
+                border-radius: 5px;
+                padding: 5px;
+                color: white;
+            }
+        }
+        .card{
+            display: flex;
+            flex-direction: column;
+            border: 1.5px solid black;
+            border-radius: 10px;
+            width: 15%;
+            text-align: center;
+
+            & h2{ 
+                border-bottom: 1px solid black; 
+                background-color: blue; 
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+                color: white;
+            }
+        }
+    </style>
+</body>
+</html>
