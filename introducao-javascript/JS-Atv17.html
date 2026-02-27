@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Gerador de tabuadas</h2>
+    <button onclick="gerarTabuada()">Gerar Tabuadas</button>
+    <div id="resultado"></div>
+
+    <script>
+        function gerarTabuada(){
+            let resultado = '';
+            let tabuada = 1;
+
+            while(tabuada <= 10){
+                resultado += `<div><h2>Tabuada do ${tabuada}</h2>`;
+                let multiplicador = 1;
+                while(multiplicador <= 10){
+                    resultado += `<p>${tabuada}x${multiplicador} = ${tabuada*multiplicador}</p></div>`;
+                    multiplicador++;
+                }
+                document.getElementById("resultado").innerHTML = resultado;
+                tabuada++;
+            }
+        }
+    </script>
+</body>
+</html>
