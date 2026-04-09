@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada Simples com While</title>
+</head>
+<body>
+    <input type="number" id="numero" placeholder="Digite um número">
+    <button onclick="gerarTabuada()">Gerar Tabuada</button>
+    <div id="resultado"></div>
+
+    <script>
+        function gerarTabuada(){
+            let contagem = 1;
+            let numero = document.getElementById("numero").value;
+            let resultado = '';
+
+            resultado += `<h2>Tabuada do ${numero}</h2>`;
+            while(contagem <= 10){
+                resultado += `${numero*contagem}<br>`;
+                contagem++;
+            }
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+</body>
+</html>

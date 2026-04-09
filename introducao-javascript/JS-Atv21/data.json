@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "nome": "CarlosSilva",
+        "senha": "Cs!va2024"
+    },
+    {
+        "id": 2,
+        "nome": "AnaSouza",
+        "senha": "An@S123"
+    },
+    {
+        "id": 3,
+        "nome": "JoaoPereira",
+        "senha": "Jp#7890"
+    },
+    {
+        "id": 4,
+        "nome": "MarianaCosta",
+        "senha": "MaC0st@22"
+    },
+    {
+        "id": 5,
+        "nome": "LucasOliveira",
+        "senha": "L0live!ra"
+    },
+    {
+        "id": 6,
+        "nome": "FernandaAlmeida",
+        "senha": "F3rn@nda"
+    },
+    {
+        "id": 7,
+        "nome": "RafaelSantos",
+        "senha": "Raf@2025"
+    },
+    {
+        "id": 8,
+        "nome": "JulianaRocha",
+        "senha": "JuR#456"
+    },
+    {
+        "id": 9,
+        "nome": "BrunoMartins",
+        "senha": "BrM!2023"
+    },
+    {
+        "id": 10,
+        "nome": "PatriciaLima",
+        "senha": "PaL!m@98"
+    }
+]
