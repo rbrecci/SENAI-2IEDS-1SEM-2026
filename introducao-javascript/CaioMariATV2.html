@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul></ul>
+    <button>Criar Lista</button>
+    <script>
+        let lista = document.querySelector("ul");
+        const botao = document.querySelector("button");
+        botao.addEventListener("click", () =>{
+            let fragmento = document.createDocumentFragment();
+            for (let i = 0; i <= 5; i++) {
+                li = document.createElement("li")
+                li.textContent =`Meu item legal numero ${i}`
+                fragmento.appendChild(li);
+            }
+            lista.appendChild(fragmento);
+        })
+    </script>
+</body>
+</html>

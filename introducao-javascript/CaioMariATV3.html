@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Mostrar Nomes</button>
+    <ul></ul>
+    <script>
+        const nomes = ["Rafael", "Caio", "Zanetti", "Paolla", "Rafaela", "Radael"];
+
+        let botao = document.querySelector("button");
+        let lista = document.querySelector("ul");
+
+        botao.addEventListener("click", () => {
+            let fragmento = document.createDocumentFragment();
+            nomes.forEach(nome => {
+                let li = document.createElement("li");
+                li.textContent = `Meu nome é ${nome}`;
+                fragmento.appendChild(li);
+            });
+            lista.appendChild(fragmento);
+        })
+    </script>
+</body>
+</html>
